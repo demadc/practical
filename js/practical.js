@@ -67,7 +67,6 @@
 // } else {
 //     console.log ("Такого місяця не існує")
 // }
-<<<<<<< Updated upstream
  
 // Задача 6_'через введення повної назви місяця'
 
@@ -118,9 +117,6 @@ switch (monthBirth) {
 }
 console.log(season);
 */
-=======
->>>>>>> Stashed changes
-
 
 // ЗАДАЧА 7
 // НАПИШІТЬ ПРОГРАМУ, ЯКА ПРОВІРЯЄ ЛОГІН І ПАРОЛЬ,
@@ -163,17 +159,10 @@ console.log(season);
 //     console.log('такого периода нема')
 // }
 
-<<<<<<< Updated upstream
 /*switch (UpPeriod) {
     case 'ДЕНЬ':
         console.log('ціна 1.99')
         break;
-=======
-// switch (UpPeriod) {
-//     case 'ДЕНЬ':
-//         console.log('ціна 1.99')
-//         break;
->>>>>>> Stashed changes
 
 // case 'НЕДІЛЯ':
 //     console.log('ціна 5.99')
