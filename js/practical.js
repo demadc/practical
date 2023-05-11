@@ -686,3 +686,250 @@ for (let product of products) {
 
 getProductPrice('Rubin');
 */
+
+
+
+// autocheck_19
+/*
+const products = [
+  { name: "Radar", price: 1300, quantity: 4 },
+  { name: "Scanner", price: 2700, quantity: 3 },
+  { name: "Droid", price: 400, quantity: 7 },
+  { name: "Grip", price: 1200, quantity: 9 },
+];
+
+function getAllPropValues(propName) {
+  // Change code below this line
+ const values = [];
+  
+for (let product of products) {
+  if (product[propName]) {
+    values.push(product[propName]);
+  }  
+}
+ return values;
+
+
+  // Change code above this line
+}
+*/
+
+
+// autocheck_31
+/*
+function add(...args) {
+  let sum = 0;
+  for (let arg of args) {
+    sum += arg;
+  }
+  return  sum;
+  add(17, 10, 8, 21, 5, 4, 2);
+  console.log(sum);
+}
+*/
+
+// autocheck_34
+/*
+const bookShelf = {
+  // Change code below this line
+  
+  books: ["The last kingdom", "The guardian of dreams"],
+  getBooks() {
+    return "Returning all books";
+  },
+  addBook(bookName) {
+    return `Adding book ${bookName}`;
+  },
+  removeBook(bookName) {
+    return `Deleting book ${bookName}`;
+  },
+  updateBook(oldName, newName) {
+   return `Updating book ${oldName} to ${newName}`;
+  
+  // Change code above this line
+},
+};
+bookShelf.getBooks();
+bookShelf.addBook("Haze");
+bookShelf.removeBook("Red sunset");
+bookShelf.updateBook("Sands of dune", "Dune");
+*/
+
+
+// Ex. from Konspekt
+/*const bookShelf = {
+  books: ["Останнє королівство"],
+  getBooks() {
+    return this.books;
+  },
+  addBook(bookName) {
+    this.books.push(bookName);
+  },
+  removeBook(bookName) {
+    const bookIndex = this.books.indexOf(bookName);
+    this.books.splice(bookIndex, 1);
+  },
+};
+
+console.log(bookShelf.getBooks()); // ["Останнє королівство"]
+bookShelf.addBook("Імла");
+bookShelf.addBook("Страж снів");
+console.log(bookShelf.getBooks()); // ["Останнє королівство", "Імла", "Страж снів"]
+bookShelf.removeBook("Імла");
+console.log(bookShelf.getBooks()); // ["Останнє королівство", "Страж снів"]
+
+*/
+
+// Ex. from Konspekt
+/*
+const bookShelf = {
+   books: ["The last kingdom", "Haze", "The guardian of dreams"],
+   updateBook(oldName, newName) {
+    // Change code below this line
+  
+    const oldNameBook = bookShelf.books.indexOf(oldName);
+   
+      bookShelf.books.splice(oldNameBook, 1, newName);
+       
+    // Change code above this line
+  },
+};
+*/
+
+
+// autocheck_36
+/*
+const atTheOldToad = {
+  // Change code below this line
+potions: [],
+
+
+  // Change code above this line
+};
+*/
+
+// autocheck_41
+/*
+const atTheOldToad = {
+  potions: [
+    { name: "Speed potion", price: 460 },
+    { name: "Dragon breath", price: 780 },
+    { name: "Stone skin", price: 520 },
+  ],
+
+  // Change code below this line
+
+  getPotions() {
+    const potionArray = [];
+    
+    for (let potion of this.potions) {
+      potionArray.push(potion);
+    }
+    return potionArray;
+  },
+
+  addPotion(newPotion) {
+
+    for (let potion of this.potions) {
+      if (potion.name === newPotion.name) {
+        return `Error! Potion ${newPotion.name} is already in your inventory!`;
+      }
+    }
+    return this.potions.push(newPotion);
+  },
+
+    removePotion(potionName) {
+    for (let i = 0; i < this.potions.length; i += 1) {
+      if (this.potions[i].name === potionName) {
+        this.potions.splice(i, 1);
+        break;
+      }
+    }
+  },
+  
+  updatePotionName(oldName, newName) {
+    for (let potion of this.potions) {
+      if (potion.name === oldName) {
+        potion.name = newName;
+        break;
+      }
+    }
+ },
+};
+*/
+
+// Ex_from_Konspekt
+
+/*
+const bookShelf = {
+  books: ["Останнє королівство"],
+  getBooks() {
+    return this.books;
+  },
+  addBook(bookName) {
+    this.books.push(bookName);
+  },
+  removeBook(bookName) {
+    const bookIndex = this.books.indexOf(bookName);
+    this.books.splice(bookIndex, 1);
+  },
+};
+
+console.log(bookShelf.getBooks()); // ["Останнє королівство"]
+bookShelf.addBook("Імла");
+bookShelf.addBook("Страж снів");
+console.log(bookShelf.getBooks()); // ["Останнє королівство", "Імла", "Страж снів"]
+bookShelf.removeBook("Імла");
+console.log(bookShelf.getBooks()); // ["Останнє королівство", "Страж снів"]
+*/
+
+
+// NEED to discuss with tutor
+
+const atTheOldToad = {
+  potions: [
+    { name: "Speed potion", price: 460 },
+    { name: "Dragon breath", price: 780 },
+    { name: "Stone skin", price: 520 },
+  ],
+
+  // Change code below this line
+
+  getPotions() {
+    return this.potions;
+  },
+
+  addPotion(newPotion) {
+    const nameExist = `Error! Potion (${newPotion}) is already in your inventory!`;
+    for (let potion of this.potions) {
+      if (potion.name === newPotion) {
+        
+      }  
+    }
+    this.potions.push(newPotion); 
+  },
+
+  removePotion(potionName) {
+    const potionIndex = this.potions.indexOf(potionName);
+    return this.potions.splice(potionIndex, 1)
+  },
+  
+  updatePotionName(oldName, newName) {
+    const potionIndex = this.potions.indexOf(oldName);
+    return this.potions.splice(potionIndex, 1, newName)
+ },
+
+};
+
+console.log(atTheOldToad.getPotions());
+console.log(atTheOldToad.addPotion({name: "Speed potion", price: 520})); 
+//atTheOldToad.addPotion({name: "F-16", price: 333});
+//atTheOldToad.addPotion({name: "ATACMS", price: 1500});
+//console.log(atTheOldToad.getPotions()); 
+//atTheOldToad.removePotion({name: "ATACMS", price: 1500});
+//console.log(atTheOldToad.getPotions());
+//atTheOldToad.updatePotionName({name: "F-16", price: 333}, {name: "B-52", price: 555});
+//console.log(atTheOldToad.getPotions());
+
+
+

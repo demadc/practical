@@ -182,9 +182,9 @@ function removeCourse(course) {
 }
 */
 
-/*function updateCourse(oldNameCourse, newNameCourse) {
-    let oldCourse = courses.indexOf(oldNameCourse);
-    courses.splice(oldCourse, 1, newNameCourse);
+    /*function updateCourse(oldNameCourse, newNameCourse) {
+        let oldCourse = courses.indexOf(oldNameCourse);
+            courses.splice(oldCourse, 1, newNameCourse);
 
 }
 */
